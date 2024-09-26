@@ -34,11 +34,47 @@
                 max-width: 150px; /* Меньший размер для мобильных устройств */
             }
 
-            .intro-description {
-                width: 100%; /* Описание на всю ширину */
-                margin-left: 0;
-                text-align: center; /* Центрируем текст */
-            }
+        /* Левый блок с описанием */
+.intro-description {
+    font-size: 0.9em;
+    width: 40%;
+    text-align: left;
+    margin-left: -50px;
+    max-width: 100%; /* Добавляем ограничение по максимальной ширине */
+    word-wrap: break-word; /* Разрешаем перенос слов */
+}
+
+/* Правый блок с фото */
+.intro-photo {
+    width: 35%;
+    text-align: right;
+    margin-right: 10px;
+    max-width: 100%; /* Ограничиваем максимальную ширину для адаптивности */
+}
+
+.intro-photo img {
+    border-radius: 15%;
+    max-width: 100%; /* Изменяем максимальную ширину на 100% */
+    box-shadow: 0 0 15px #FF00FF;
+}
+
+/* Добавляем медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Ставим блоки один под другим на мобильных */
+        text-align: center;
+    }
+
+    .intro-description, .intro-photo {
+        width: 100%; /* На мобильных устройствах ширина 100% */
+        margin: 0; /* Убираем боковые отступы */
+    }
+
+    .intro-description {
+        margin-bottom: 20px; /* Отступ между текстом и фото */
+    }
+}
+
 
             .project-card img {
                 max-width: 100%; /* Изображения проектов на всю ширину */
