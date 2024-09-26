@@ -19,31 +19,30 @@
 
         /* Контейнер с именем и описанием */
         .intro {
-            margin-top: 50px; /* Добавим верхний отступ */
+            margin-top: 50px;
             display: flex;
+            flex-direction: column; /* Центрируем блоки по вертикали */
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Сделаем контент вертикальным */
-            text-align: center; /* Центрируем текст */
-            padding: 20px; /* Уменьшим padding */
-            max-width: 800px;
-            margin: 50px auto; /* Центрируем контейнер */
+            padding: 50px;
+            max-width: 1200px;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 4s forwards;
         }
 
-        /* Описание */
+        /* Левый блок с описанием */
         .intro-description {
-            font-size: 1em;
-            max-width: 100%; /* Полная ширина на мобильных устройствах */
+            font-size: 0.9em;
+            width: 100%; /* Увеличиваем до 100% для адаптации под экран */
             text-align: center; /* Центрируем текст */
-            margin: 0; /* Убираем лишние отступы */
+            margin-left: 0; /* Убираем отступ слева */
+            margin-bottom: 20px; /* Добавляем отступ снизу */
         }
 
-        /* Фото и имя */
+        /* Правый блок с именем, фамилией и фото */
         .intro-photo {
-            margin-top: 20px; /* Добавим отступ сверху */
+            text-align: center; /* Центрируем фото и имя */
         }
 
         .intro-photo img {
@@ -87,11 +86,11 @@
         }
 
         nav a:hover {
-            color: #FF00FF; /* Неоновый фиолетовый при наведении */
+            color: #FF00FF;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 4em;
             color: #00FFCC;
             text-shadow: 0 0 10px #00FFCC;
         }
@@ -124,7 +123,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 0, 255, 0.2); /* Фиолетовый эффект подсветки */
+            background: rgba(255, 0, 255, 0.2); 
             transition: opacity 0.5s;
             opacity: 0;
         }
@@ -148,10 +147,10 @@
         }
 
         .project-card img {
-            width: 150%; /* Задайте ширину для изображений */
-            max-width: 250px; /* Максимальная ширина изображений */
-            margin-bottom: 10px; /* Отступ снизу */
-            border-radius: 10%; /* Округление углов */
+            width: 150%; 
+            max-width: 250px;
+            margin-bottom: 10px;
+            border-radius: 10%;
         }
 
         /* Сетка карточек */
@@ -196,10 +195,6 @@
 
     <!-- Основной блок с описанием и фото -->
     <div class="intro">
-        <div class="intro-photo">
-            <h1>Bekhruz Shodiev</h1>
-            <img src="photo_2024-09-26_01-23-52.jpg" alt="Your photo">
-        </div>
         <div class="intro-description">
             <p>
                 I am a highly creative individual with a strong determination to see every project through to completion. 
@@ -207,6 +202,10 @@
                 into developing various applications, websites, and smart contracts on the TON blockchain, among other technologies. 
                 My diverse experience and passion for innovation drive me to constantly explore new challenges and deliver exceptional results.
             </p>
+        </div>
+        <div class="intro-photo">
+            <h1>ㅤBekhruz Shodiev</h1>
+            <img src="photo_2024-09-26_01-23-52.jpg" alt="Your photo">
         </div>
     </div>
 
@@ -219,17 +218,20 @@
     <div id="projects" class="container">
         <h2>more than 20 projects</h2>
         <div class="project-grid">
-            <!-- Добавьте карточки проектов здесь -->
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1 Image"> 
+                <h3>Eclipse</h3>
+                <p>A community for photographers at school, founded by my friends and me...</p>
+            </div>
+            <!-- остальные карточки проектов -->
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
         <section id="contact"></section>
-        <p>bekhruz.one@gmail.com</p>
-        <p><a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
+            <p>bekhruz.one@gmail.com</p>
+            <p> <a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
     </footer>
-
 </body>
 </html>
-
