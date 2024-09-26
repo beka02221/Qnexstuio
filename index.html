@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Отключение масштабирования -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QnexStudio</title>
     <style>
@@ -11,109 +11,45 @@
             font-family: 'Courier New', monospace;
             background: url('https://steamuserimages-a.akamaihd.net/ugc/945094571616867748/680E4979CC75A2310664E0883F3F3FC6CBECA3BE/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true') no-repeat center center fixed;
             background-size: cover;
-            color: #00FFCC;
+            color: #00FFCC; /* Неоновый бирюзовый цвет */
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
 
-        /* Адаптация для мобильных устройств */
-        @media (max-width: 768px) {
-            .intro {
-                flex-direction: column; /* Переводим в колонку */
-                padding: 20px;
-                align-items: center;
-            }
-
-            .intro-photo {
-                text-align: center;
-                margin: 0; /* Убираем отступы */
-            }
-
-            .intro-photo img {
-                max-width: 150px; /* Меньший размер для мобильных устройств */
-            }
-
-        /* Левый блок с описанием */
-.intro-description {
-    font-size: 0.9em;
-    width: 40%;
-    text-align: left;
-    margin-left: -50px;
-    max-width: 100%; /* Добавляем ограничение по максимальной ширине */
-    word-wrap: break-word; /* Разрешаем перенос слов */
-}
-
-/* Правый блок с фото */
-.intro-photo {
-    width: 35%;
-    text-align: right;
-    margin-right: 10px;
-    max-width: 100%; /* Ограничиваем максимальную ширину для адаптивности */
-}
-
-.intro-photo img {
-    border-radius: 15%;
-    max-width: 100%; /* Изменяем максимальную ширину на 100% */
-    box-shadow: 0 0 15px #FF00FF;
-}
-
-/* Добавляем медиазапрос для мобильных устройств */
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column; /* Ставим блоки один под другим на мобильных */
-        text-align: center;
-    }
-
-    .intro-description, .intro-photo {
-        width: 100%; /* На мобильных устройствах ширина 100% */
-        margin: 0; /* Убираем боковые отступы */
-    }
-
-    .intro-description {
-        margin-bottom: 20px; /* Отступ между текстом и фото */
-    }
-}
-
-
-            .project-card img {
-                max-width: 100%; /* Изображения проектов на всю ширину */
-                margin: 0 auto;
-            }
-        }
-
         /* Контейнер с именем и описанием */
         .intro {
-            margin-top: 50px;
+            margin-top: 50px; /* Добавим верхний отступ */
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 100px;
-            max-width: 1200px;
+            flex-direction: column; /* Сделаем контент вертикальным */
+            text-align: center; /* Центрируем текст */
+            padding: 20px; /* Уменьшим padding */
+            max-width: 800px;
+            margin: 50px auto; /* Центрируем контейнер */
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 4s forwards;
         }
 
-        /* Левый блок с фото */
+        /* Описание */
+        .intro-description {
+            font-size: 1em;
+            max-width: 100%; /* Полная ширина на мобильных устройствах */
+            text-align: center; /* Центрируем текст */
+            margin: 0; /* Убираем лишние отступы */
+        }
+
+        /* Фото и имя */
         .intro-photo {
-            width: 35%;
-            text-align: right;
-            margin-right: 10px;
+            margin-top: 20px; /* Добавим отступ сверху */
         }
 
         .intro-photo img {
             border-radius: 15%;
             max-width: 200px;
             box-shadow: 0 0 15px #FF00FF;
-        }
-
-        /* Описание под фото */
-        .intro-description {
-            font-size: 0.9em;
-            width: 60%;
-            text-align: left;
-            margin-top: 20px;
         }
 
         /* Анимация появления текста */
@@ -151,11 +87,11 @@
         }
 
         nav a:hover {
-            color: #FF00FF;
+            color: #FF00FF; /* Неоновый фиолетовый при наведении */
         }
 
         h1 {
-            font-size: 4em;
+            font-size: 2.5em;
             color: #00FFCC;
             text-shadow: 0 0 10px #00FFCC;
         }
@@ -188,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 0, 255, 0.2);
+            background: rgba(255, 0, 255, 0.2); /* Фиолетовый эффект подсветки */
             transition: opacity 0.5s;
             opacity: 0;
         }
@@ -212,10 +148,10 @@
         }
 
         .project-card img {
-            width: 150%;
-            max-width: 250px;
-            margin-bottom: 10px;
-            border-radius: 10%;
+            width: 150%; /* Задайте ширину для изображений */
+            max-width: 250px; /* Максимальная ширина изображений */
+            margin-bottom: 10px; /* Отступ снизу */
+            border-radius: 10%; /* Округление углов */
         }
 
         /* Сетка карточек */
@@ -258,10 +194,10 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Основной блок с фото и описанием -->
+    <!-- Основной блок с описанием и фото -->
     <div class="intro">
         <div class="intro-photo">
-            <h1>ㅤBekhruz Shodiev</h1>
+            <h1>Bekhruz Shodiev</h1>
             <img src="photo_2024-09-26_01-23-52.jpg" alt="Your photo">
         </div>
         <div class="intro-description">
@@ -283,39 +219,17 @@
     <div id="projects" class="container">
         <h2>more than 20 projects</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <img src="project1.png" alt="Project 1 Image">
-                <h3>Eclipse</h3>
-                <p>A community for photographers at school, founded by my friends and me, aimed at highlighting the significant role that photography plays in our lives. I also developed a dedicated platform for this community, allowing members to share their ideas and showcase their photographs.</p>
-            </div>
-            <div class="project-card">
-                <img src="project2.png" alt="Project 2 Image">
-                <h3>Qnex Store</h3>
-                <p>I founded my online store at the age of 15. We source all of our products directly from China, ensuring high-quality goods at competitive prices. Now we alreade serve over 50 satisfied clients.</p>
-            </div>
-            <div class="project-card">
-                <img src="project3.png" alt="Project 3 Image">
-                <h3>Escape Room Game</h3>
-                <p>I created this game without any specific intentions, just for myself, because I was inspired by one game! #gamedev #Unity c#</p>
-            </div>
-            <div class="project-card">
-                <img src="project4.png" alt="Project 4 Image">
-                <h3>Upcoming</h3>
-                <p>A unique game currently in development!</p>
-            </div>
-            <div class="project-card">
-                <img src="project5.png" alt="Project 5 Image">
-                <h3>Under development...</h3>
-                <p>Stay tuned for more!</p>
-            </div>
+            <!-- Добавьте карточки проектов здесь -->
         </div>
     </div>
 
     <!-- Footer -->
-    <footer id="contact">
-        <p>Feel free to get in touch!</p>
-        <a href="mailto:bekhruzshodiev1@gmail.com">bekhruzshodiev1@gmail.com</a>
+    <footer>
+        <section id="contact"></section>
+        <p>bekhruz.one@gmail.com</p>
+        <p><a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
     </footer>
 
 </body>
 </html>
+
