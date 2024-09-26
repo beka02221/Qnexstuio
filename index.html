@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Запрет на увеличение -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QnexStudio</title>
     <style>
@@ -11,7 +11,7 @@
             font-family: 'Courier New', monospace;
             background: url('https://steamuserimages-a.akamaihd.net/ugc/945094571616867748/680E4979CC75A2310664E0883F3F3FC6CBECA3BE/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true') no-repeat center center fixed;
             background-size: cover;
-            color: #00FFCC; /* Неоновый бирюзовый цвет */
+            color: #00FFCC;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -19,7 +19,7 @@
 
         /* Контейнер с именем и описанием */
         .intro {
-            margin-top: 50px; /* Добавьте верхний отступ для сдвига вниз */
+            margin-top: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -35,10 +35,10 @@
             font-size: 0.9em;
             width: 40%;
             text-align: left;
-            margin-left: -50px; 
+            margin-left: -50px;
         }
 
-        /* Правый блок с именем, фамилией и фото */
+        /* Правый блок с именем и фото */
         .intro-photo {
             width: 35%;
             text-align: right;
@@ -49,14 +49,6 @@
             border-radius: 15%;
             max-width: 200px;
             box-shadow: 0 0 15px #FF00FF;
-        }
-
-        /* Анимация появления текста */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Основной контейнер */
@@ -86,7 +78,7 @@
         }
 
         nav a:hover {
-            color: #FF00FF; /* Неоновый фиолетовый при наведении */
+            color: #FF00FF;
         }
 
         h1 {
@@ -101,7 +93,6 @@
             margin-top: 20px;
         }
 
-        /* Кнопки */
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -123,7 +114,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 0, 255, 0.2); /* Фиолетовый эффект подсветки */
+            background: rgba(255, 0, 255, 0.2);
             transition: opacity 0.5s;
             opacity: 0;
         }
@@ -147,10 +138,10 @@
         }
 
         .project-card img {
-            width: 150%; /* Задайте ширину для изображений */
-            max-width: 250px; /* Максимальная ширина изображений */
-            margin-bottom: 10px; /* Отступ снизу */
-            border-radius: 10%; /* Округление углов */
+            width: 150%;
+            max-width: 250px;
+            margin-bottom: 10px;
+            border-radius: 10%;
         }
 
         /* Сетка карточек */
@@ -182,6 +173,59 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column; /* Вертикальное расположение блоков */
+                padding: 20px;
+            }
+
+            .intro-description, .intro-photo {
+                width: 100%; /* Полная ширина на мобильных */
+                margin: 0;
+                text-align: center;
+            }
+
+            .intro-description p {
+                font-size: 1.1em;
+                text-align: justify;
+            }
+
+            .intro-photo img {
+                max-width: 150px; /* Уменьшение фото */
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            nav {
+                padding: 10px 20px;
+            }
+
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .project-card img {
+                max-width: 100px; /* Уменьшение изображений в проектах */
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -204,7 +248,7 @@
             </p>
         </div>
         <div class="intro-photo">
-            <h1>ㅤBekhruz Shodiev</h1>
+            <h1>Bekhruz Shodiev</h1>
             <img src="photo_2024-09-26_01-23-52.jpg" alt="Your photo">
         </div>
     </div>
@@ -219,44 +263,24 @@
         <h2>more than 20 projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="project1.png" alt="Project 1 Image"> <!-- Добавьте изображение для проекта 1 -->
+                <img src="project1.png" alt="Project 1 Image">
                 <h3>Eclipse</h3>
-                <p>A community for photographers at school, founded by my friends and me, aimed at highlighting the significant role that photography plays in our lives. I also developed a dedicated platform for this community, allowing members to share their ideas and showcase their photographs.</p>
+                <p>A community for photographers at school...</p>
             </div>
             <div class="project-card">
-                <img src="project2.png" alt="Project 2 Image"> <!-- Добавьте изображение для проекта 2 -->
+                <img src="project2.png" alt="Project 2 Image">
                 <h3>Qnex Store</h3>
-                <p>I founded my online store at the age of 15. We source all of our products directly from China, ensuring high-quality goods at competitive prices. Now we alreade serve over 50 satisfied clients.</p>
+                <p>I founded my online store at the age of 15...</p>
             </div>
-            <div class="project-card">
-                <img src="project3.png" alt="Project 3 Image"> <!-- Добавьте изображение для проекта 3 -->
-                <h3>Escape Room Game</h3>
-                <p>I created this game without any specific intentions, just for myself, because I was inspired by one game! #gamedev #Unity c#</p>
-            </div>
-            <div class="project-card">
-                <img src="project4.png" alt="Project 4 Image"> <!-- Добавьте изображение для проекта 4 -->
-                <h3>Zombie Shooter</h3>
-                <p>A game I developed using Unity for the Yandex.Games platform.</p>
-            </div>
-            <div class="project-card">
-                <img src="project5.jpg" alt="Project 5 Image"> <!-- Добавьте изображение для проекта 5 -->
-                <h3>Project 5</h3>
-                <p>Description of the fifth project goes here. Super creative!</p>
-            </div>
-            <div class="project-card">
-                <img src="project6.jpg" alt="Project 6 Image"> <!-- Добавьте изображение для проекта 6 -->
-                <h3>Project 6</h3>
-                <p>Description of the sixth project goes here. Innovative!</p>
-            </div>
+            <!-- Другие проекты -->
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <section id="contact"></section
-            <p>bekhruz.one@gmail.com</p>
-            <p> <a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
-        </footer>
-    
-    </body>
-    </html>
+        <section id="contact"></section>
+        <p>bekhruz.one@gmail.com</p>
+        <p><a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
+    </footer>
+</body>
+</html>
