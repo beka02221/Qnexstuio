@@ -19,30 +19,29 @@
 
         /* Контейнер с именем и описанием */
         .intro {
-            margin-top: 50px;
+            margin-top: 50px; /* Добавьте верхний отступ для сдвига вниз */
             display: flex;
-            flex-direction: column; /* Центрируем блоки по вертикали */
-            justify-content: center;
+            justify-content: center; /* Центрирование по горизонтали */
             align-items: center;
-            padding: 50px;
+            flex-direction: column; /* Вертикальная ориентация */
+            padding: 100px;
             max-width: 1200px;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 4s forwards;
         }
 
-        /* Левый блок с описанием */
+        /* Описание */
         .intro-description {
             font-size: 0.9em;
-            width: 100%; /* Увеличиваем до 100% для адаптации под экран */
-            text-align: center; /* Центрируем текст */
-            margin-left: 0; /* Убираем отступ слева */
-            margin-bottom: 20px; /* Добавляем отступ снизу */
+            text-align: center; /* Центрирование текста */
+            margin: 20px 0; /* Отступы сверху и снизу */
+            width: 100%; /* Занимает всю ширину */
         }
 
         /* Правый блок с именем, фамилией и фото */
         .intro-photo {
-            text-align: center; /* Центрируем фото и имя */
+            text-align: center; /* Центрирование фото и имени */
         }
 
         .intro-photo img {
@@ -86,7 +85,7 @@
         }
 
         nav a:hover {
-            color: #FF00FF;
+            color: #FF00FF; /* Неоновый фиолетовый при наведении */
         }
 
         h1 {
@@ -123,7 +122,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 0, 255, 0.2); 
+            background: rgba(255, 0, 255, 0.2); /* Фиолетовый эффект подсветки */
             transition: opacity 0.5s;
             opacity: 0;
         }
@@ -147,10 +146,10 @@
         }
 
         .project-card img {
-            width: 150%; 
-            max-width: 250px;
-            margin-bottom: 10px;
-            border-radius: 10%;
+            width: 150%; /* Задайте ширину для изображений */
+            max-width: 250px; /* Максимальная ширина изображений */
+            margin-bottom: 10px; /* Отступ снизу */
+            border-radius: 10%; /* Округление углов */
         }
 
         /* Сетка карточек */
@@ -219,19 +218,47 @@
         <h2>more than 20 projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="project1.png" alt="Project 1 Image"> 
+                <img src="project1.png" alt="Project 1 Image"> <!-- Добавьте изображение для проекта 1 -->
                 <h3>Eclipse</h3>
-                <p>A community for photographers at school, founded by my friends and me...</p>
+                <p>A community for photographers at school, founded by my friends and me, aimed at highlighting the significant role that photography plays in our lives. I also developed a dedicated platform for this community, allowing members to share their ideas and showcase their photographs.</p>
             </div>
-            <!-- остальные карточки проектов -->
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2 Image"> <!-- Добавьте изображение для проекта 2 -->
+                <h3>Qnex Store</h3>
+                <p>I founded my online store at the age of 15. We source all of our products directly from China, ensuring high-quality goods at competitive prices. Now we already serve over 50 satisfied clients.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.png" alt="Project 3 Image"> <!-- Добавьте изображение для проекта 3 -->
+                <h3>Escape Room Game</h3>
+                <p>I created this game without any specific intentions, just for myself, because I was inspired by one game! #gamedev #Unity c#</p>
+            </div>
+            <div class="project-card">
+                <img src="project4.png" alt="Project 4 Image"> <!-- Добавьте изображение для проекта 4 -->
+                <h3>Zombie Shooter</h3>
+                <p>A game I developed using Unity for the Yandex.Games platform.</p>
+            </div>
+            <div class="project-card">
+                <img src="project5.jpg" alt="Project 5 Image"> <!-- Добавьте изображение для проекта 5 -->
+                <h3>Car Game</h3>
+                <p>I created this game with a friend as a project for our school!</p>
+            </div>
+            <div class="project-card">
+                <img src="project6.jpg" alt="Project 6 Image"> <!-- Добавьте изображение для проекта 6 -->
+                <h3>My first Telegram bot</h3>
+                <p>At the beginning of my journey, I developed my first Telegram bot to help my schoolmates. It served as a simple assistant with various functionalities!</p>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Контакт -->
+    <div id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to <a href="mailto:your-email@example.com">email me</a>.</p>
+    </div>
+
+    <!-- Подвал -->
     <footer>
-        <section id="contact"></section>
-            <p>bekhruz.one@gmail.com</p>
-            <p> <a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
+        <p>&copy; 2024 QnexStudio. All rights reserved.</p>
     </footer>
 </body>
 </html>
