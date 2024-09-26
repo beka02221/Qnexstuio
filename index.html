@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QnexStudio</title>
+    <style>
+        /* Основной фон */
+        body {
+            font-family: 'Courier New', monospace;
+            background: url('https://steamuserimages-a.akamaihd.net/ugc/945094571616867748/680E4979CC75A2310664E0883F3F3FC6CBECA3BE/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true') no-repeat center center fixed;
+            background-size: cover;
+            color: #00FFCC; /* Неоновый бирюзовый цвет */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Контейнер с именем и описанием */
+        .intro {
+            margin-top: 50px; /* Добавьте верхний отступ для сдвига вниз */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px;
+            max-width: 1200px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 4s forwards;
+        }
+
+        /* Левый блок с описанием */
+        .intro-description {
+            font-size: 0.9em;
+            width: 40%;
+            text-align: left;
+            margin-left: -50px; 
+        }
+
+        /* Правый блок с именем, фамилией и фото */
+        .intro-photo {
+            width: 35%;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .intro-photo img {
+            border-radius: 15%;
+            max-width: 200px;
+            box-shadow: 0 0 15px #FF00FF;
+        }
+
+        /* Анимация появления текста */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Основной контейнер */
+        .container {
+            text-align: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Навигация */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid #00FFCC;
+        }
+
+        nav a {
+            color: #00FFCC;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #FF00FF; /* Неоновый фиолетовый при наведении */
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #00FFCC;
+            text-shadow: 0 0 10px #00FFCC;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #FF00FF;
+            margin-top: 20px;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00FFCC;
+            border: 2px solid #00FFCC;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 255, 0.2); /* Фиолетовый эффект подсветки */
+            transition: opacity 0.5s;
+            opacity: 0;
+        }
+
+        .btn:hover::before {
+            opacity: 1;
+        }
+
+        /* Карточки проектов */
+        .project-card {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 1px solid #00FFCC;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #FF00FF;
+        }
+
+        .project-card img {
+            width: 150%; /* Задайте ширину для изображений */
+            max-width: 250px; /* Максимальная ширина изображений */
+            margin-bottom: 10px; /* Отступ снизу */
+            border-radius: 10%; /* Округление углов */
+        }
+
+        /* Сетка карточек */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00FFCC;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #FF00FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="#" onclick="location.reload(); return false;">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Основной блок с описанием и фото -->
+    <div class="intro">
+        <div class="intro-description">
+            <p>
+                I am a highly creative individual with a strong determination to see every project through to completion. 
+                I started my journey in game development, where I spent 3 years. Later, I transitioned 
+                into developing various applications, websites, and smart contracts on the TON blockchain, among other technologies. 
+                My diverse experience and passion for innovation drive me to constantly explore new challenges and deliver exceptional results.
+            </p>
+        </div>
+        <div class="intro-photo">
+            <h1>ㅤBekhruz Shodiev</h1>
+            <img src="photo_2024-09-26_01-23-52.jpg" alt="Your photo">
+        </div>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="container">
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+
+    <!-- Проекты -->
+    <div id="projects" class="container">
+        <h2>more than 20 projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1 Image"> <!-- Добавьте изображение для проекта 1 -->
+                <h3>Eclipse</h3>
+                <p>A community for photographers at school, founded by my friends and me, aimed at highlighting the significant role that photography plays in our lives. I also developed a dedicated platform for this community, allowing members to share their ideas and showcase their photographs.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2 Image"> <!-- Добавьте изображение для проекта 2 -->
+                <h3>Qnex Store</h3>
+                <p>I founded my online store at the age of 15. We source all of our products directly from China, ensuring high-quality goods at competitive prices. Now we alreade serve over 50 satisfied clients.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.png" alt="Project 3 Image"> <!-- Добавьте изображение для проекта 3 -->
+                <h3>Escape Room Game</h3>
+                <p>I created this game without any specific intentions, just for myself, because I was inspired by one game! #gamedev #Unity c#</p>
+            </div>
+            <div class="project-card">
+                <img src="project4.png" alt="Project 4 Image"> <!-- Добавьте изображение для проекта 4 -->
+                <h3>Zombie Shooter</h3>
+                <p>A game I developed using Unity for the Yandex.Games platform.</p>
+            </div>
+            <div class="project-card">
+                <img src="project5.jpg" alt="Project 5 Image"> <!-- Добавьте изображение для проекта 5 -->
+                <h3>Project 5</h3>
+                <p>Description of the fifth project goes here. Super creative!</p>
+            </div>
+            <div class="project-card">
+                <img src="project6.jpg" alt="Project 6 Image"> <!-- Добавьте изображение для проекта 6 -->
+                <h3>Project 6</h3>
+                <p>Description of the sixth project goes here. Innovative!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <section id="contact"></section
+            <p>bekhruz.one@gmail.com</p>
+            <p> <a href="https://t.me/ShodiyevB" target="_blank">Telegram</a></p>
+        </footer>
+    
+    </body>
+    </html>
